@@ -32,7 +32,7 @@ define([
             el: '#san-francisco .flooding-view',
 
             options: {
-              minZoom: 3,
+              minZoom: 8,
               zoom: 12,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(37.7441, -122.4289)
@@ -44,10 +44,10 @@ define([
             el: '#barcelona .flooding-view',
 
             options: {
-              minZoom: 3,
-              zoom: 5,
+              minZoom: 8,
+              zoom: 12,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(2.1487679, 41.39479)
+              center: new google.maps.LatLng(41.4186, 2.2598)
             }
           });
 
@@ -55,21 +55,10 @@ define([
             el: '#miammi .flooding-view',
 
             options: {
-              minZoom: 3,
+              minZoom: 8,
               zoom: 12,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(37.7441, -122.4289)
-            }
-          });
-
-          new MapView({
-            el: '#barcelona .flooding-view',
-
-            options: {
-              minZoom: 3,
-              zoom: 12,
-              mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(37.7441, -122.4289)
+              center: new google.maps.LatLng(25.8280, -80.1736)
             }
           });
 
@@ -77,10 +66,10 @@ define([
             el: '#san-sebastian .flooding-view',
 
             options: {
-              minZoom: 3,
-              zoom: 12,
+              minZoom: 8,
+              zoom: 13,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(37.7441, -122.4289)
+              center: new google.maps.LatLng(43.3099, -1.9913)
             }
           });
 
@@ -88,10 +77,10 @@ define([
             el: '#aarhon .flooding-view',
 
             options: {
-              minZoom: 3,
+              minZoom: 8,
               zoom: 12,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(37.7441, -122.4289)
+              center: new google.maps.LatLng(56.1489, 10.2317)
             }
           });
 
