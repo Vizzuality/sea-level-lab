@@ -26,8 +26,15 @@ define([
       $('.widgets').append(this.el);
     },
 
-    _publish: function() {
+    _publish: function(e) {
+      $('li').removeClass('is-active');
+
       mps.publish('filter/change', [this._getParams()]);
+
+      var target = $(e.currentTarget).closest('li');
+      target.addClass('is-active');
+
+
     },
 
     _getParams: function() {

@@ -1,4 +1,19 @@
 .map {
-  height: 100%;
-  width: 100%;
+  width: 49%;
+  height: 400px;
+  background-color: #ddd;
+
+  &:first-of-type {
+    float: left;
+  }
+
+  &:last-child {
+    float: right;
+  }
+}
+
+
+.city-wrapper {
+  margin-bottom: $large-margin;
+  overflow: hidden;
 }

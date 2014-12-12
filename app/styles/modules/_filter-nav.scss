@@ -1,29 +1,54 @@
 .filter-nav {
-  width: 300px;
-  height: 40px;
-  bottom: 30px;
+  //display: flex;
+  // align-items: center;
+  position: fixed;
   left: 0;
   right: 0;
-  margin: auto;
+  bottom: 0;
+  height: 50px;
   padding: 10px;
   text-align: center;
+  background-color: rgba($color-0, .9);
+  border-top: 2px solid rgba($color-01, .1);
 
-  .filter-title {
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #777;
+  .filters {
+    margin-top: 5px;
   }
 
   ul {
-    margin-top: 5px;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    width: 50%;
+    margin: 0 auto;
   }
 
   li {
     float: left;
-    display: inline-block;
-    margin-right: 6px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+
+    &.is-active {
+      color: $color-0;
+      background-color: $color-01;
+
+      label {
+        color: $color-0;
+      }
+    }
+
   }
 
+  label {
+    font-family: $site-font-family;
+    font-size: $site-font-size;
+    color: $text-color-01;
+    padding-right: 15px;
+  }
+
+  input {
+    opacity: 0;
+  }
 }

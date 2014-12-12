@@ -5,14 +5,63 @@
     <title>SF Sea Level</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <!-- build:css(.tmp) styles/main.css -->
       <link rel="stylesheet" href=".tmp/styles/main.css">
     <!-- endbuild -->
   </head>
   <body>
 
-    <div class="map"></div>
+    <img class="logo" src="/images/logo.png" alt="">
+
+    <h1>Sea rise <br>level experiment</h1>
+
+    <p>This data experiment explores the potential impacts of different sea level rise scenarios for 5 coastal cities: Barcelona, San Francisco, Boston, San Sebastian and Aarhus. Using 1m resolution DEMs, these maps show how much land, and which areas, may become flooded for a given sea level rise, assuming no change in elevation due to accretion or subsidence and no new sea level defences. For more information on how we did it, visit <a href="blog.vizzuality.com">blog.vizzuality.com.</a></p>
+
+    <nav class="mod-navigation">
+      <ul>
+        <li><a href="#san-francisco">San Francisco</a></li>
+        <li><a href="#barcelona">Barcelona</a></li>
+        <li><a href="#boston">Boston</a></li>
+        <li><a href="#san-sebastian">San Sebastián</a></li>
+        <li><a href="#aarhon">Aarhus</a></li>
+      </ul>
+    </nav>
+
+    <div class="maps">
+
+      <div id='san-francisco' class="city-wrapper">
+        <h2>San Francisco</h2>
+        <div id='san-francisco-control' class="control-view map"></div>
+        <div class="flooding-view map"></div>
+      </div>
+
+      <div id='barcelona' class="city-wrapper">
+        <h2>Barcelona</h2>
+        <div id='barcelona-control' class="control-view map"></div>
+        <div class="flooding-view map"></div>
+      </div>
+
+      <div id='boston' class="city-wrapper">
+        <h2>Boston</h2>
+        <div id='boston-control' class="control-view map"></div>
+        <div class="flooding-view map"></div>
+      </div>
+
+      <div id='san-sebastian' class="city-wrapper">
+        <h2>San Sebastián</h2>
+        <div id='san-sebastian-control' class="control-view map"></div>
+        <div class="flooding-view map"></div>
+      </div>
+
+      <div id='aarhon' class="city-wrapper">
+        <h2>Aarhus</h2>
+        <div id='aarhon-control' class="control-view map"></div>
+        <div class="flooding-view map"></div>
+      </div>
+
+    </div>
+
+
     <div class="widgets"></div>
 
     <script src="vendor/requirejs/require.js" data-main="scripts/main"></script>

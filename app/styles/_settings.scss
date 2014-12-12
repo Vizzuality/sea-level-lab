@@ -1,7 +1,45 @@
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('../fonts/akzidenzgrotesk-regular-webfont.eot');
+  src: url('../fonts/akzidenzgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/akzidenzgrotesk-regular-webfont.woff') format('woff'),
+       url('../fonts/akzidenzgrotesk-regular-webfont.ttf') format('truetype'),
+       url('../fonts/akzidenzgrotesk-regular-webfont.svg#akzidenz-grotesk_bqregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('../fonts/akzidenzgrotesk-bold-webfont.eot');
+  src: url('../fonts/akzidenzgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/akzidenzgrotesk-bold-webfont.woff') format('woff'),
+       url('../fonts/akzidenzgrotesk-bold-webfont.ttf') format('truetype'),
+       url('../fonts/akzidenzgrotesk-bold-webfont.svg#akzidenz-grotesk_bqregular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('../fonts/akzidenzgrotesk-light-webfont.eot');
+  src: url('../fonts/akzidenzgrotesk-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/akzidenzgrotesk-light-webfont.woff') format('woff'),
+       url('../fonts/akzidenzgrotesk-light-webfont.ttf') format('truetype'),
+       url('../fonts/akzidenzgrotesk-light-webfont.svg#akzidenz-grotesk_bqregular') format('svg');
+  font-weight: lighter;
+  font-style: normal;
+}
+
 // Typography
-$site-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-$site-font-size: 13px;
+$site-font-family: Akzidenz, Helvetica, Arial, sans-serif;
+$site-font-size: 18px;
 $site-line-height: 1.2;
+
+$large-margin: 80px;
+$medium-margin: 40px;
+$small-margin: 10px;
+
 
 // Colors
 $graydark: #333;
@@ -9,6 +47,13 @@ $graylight: #eee;
 $gray: #aaa;
 
 // Theme colors
-$default-color: #1a1a1a;
+$default-color:  #666;
 $primary-color: blue;
 $secondary-color: organge;
+
+$color-0: #fff;
+$color-01: #88bbe3;
+
+$text-color-01: #666;
+
+

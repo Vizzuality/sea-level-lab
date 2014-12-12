@@ -1,0 +1,37 @@
+.mod-navigation {
+  margin-bottom: $large-margin;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  li {
+
+  }
+
+  a {
+    display: block;
+    position: relative;
+    color: $text-color-01;
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: rgba($color-01, .7);
+
+      transition: height .3s ease;
+    }
+
+    &:hover:after {
+      height: 50%;
+    }
+  }
+
+}
