@@ -37,7 +37,7 @@ define([
         level=1;
       }else  if (this.params['3m']) {
         level=3;
-     }else  if (this.params['5m']) {
+      }else  if (this.params['5m']) {
        level=5;
     }
 
