@@ -35,7 +35,6 @@ require.config({
       exports: 'd3'
     }
   }
-
 });
 
 /**

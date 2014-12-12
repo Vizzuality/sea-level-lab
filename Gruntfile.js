@@ -219,7 +219,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'test',
+    // 'test',
     'clean:dist',
     'requirejs',
     'useminPrepare',
@@ -237,6 +237,11 @@ module.exports = function(grunt) {
     'clean:server',
     // 'test',
     'compass:app'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    'gh-pages',
   ]);
 
 };

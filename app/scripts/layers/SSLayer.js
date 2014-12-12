@@ -44,11 +44,11 @@ define([
 	      for(var i=0; i < w; ++i) {
 	        for(var j=0; j < h; ++j) {
 	          var pixel_pos = (j*w + i) * components;
-	          var seaLevel = imgdata[pixel_pos] - 2;
+	          var seaLevel = imgdata[pixel_pos] - 1;
 	          //var intensity = imgdata[pixel_pos + 1];
 	          //yearLoss = 2005;
 
-	          if (seaLevel >= -1 && seaLevel < level+1) {
+	          if (seaLevel >= 0 && seaLevel < level+1) {
 	            var c = 3;
 	            imgdata[pixel_pos] = 137;
               imgdata[pixel_pos + 1] = 188;

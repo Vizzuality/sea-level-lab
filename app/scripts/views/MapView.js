@@ -9,8 +9,6 @@ define([
 
   var MapView = Backbone.View.extend({
 
-    //el: '.map',
-
     initialize: function(settings) {
       _.bindAll(this, '_toggleLayer', '_addLayer');
 
@@ -48,6 +46,11 @@ define([
           featureType: "transit",
           stylers: [
             {color: "#ccdeef" },
+            {visibility: "off" }
+          ]
+        },{
+          elementType: "labels",
+          stylers: [
             {visibility: "off" }
           ]
         }

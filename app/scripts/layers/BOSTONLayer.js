@@ -7,12 +7,12 @@ define([
 
   'use strict';
 
-  var BCNLayer = CanvasLayer.extend({
+  var BOSTONLayer = CanvasLayer.extend({
 
     init: function() {
       this._super();
-     	this.name = 'miammi';
-      this.urlTemplate = 'https://api.tiles.mapbox.com/v4/darkit.miammi/%z/%x/%y.png?access_token=pk.eyJ1IjoiZGFya2l0IiwiYSI6IkhtblZxN2MifQ.4Se0dQvGFVxnnCrzPkoz3g';
+     	this.name = 'boston';
+      this.urlTemplate = 'https://api.tiles.mapbox.com/v4/darkit.boston/%z/%x/%y.png?access_token=pk.eyJ1IjoiZGFya2l0IiwiYSI6IkhtblZxN2MifQ.4Se0dQvGFVxnnCrzPkoz3g';
     },
 
     // this.params have the filter params (sea meters);
@@ -44,11 +44,11 @@ define([
 	      for(var i=0; i < w; ++i) {
 	        for(var j=0; j < h; ++j) {
 	          var pixel_pos = (j*w + i) * components;
-	          var seaLevel = imgdata[pixel_pos] - 2;
+	          var seaLevel = imgdata[pixel_pos] - 1;
 	          //var intensity = imgdata[pixel_pos + 1];
 	          //yearLoss = 2005;
 
-	          if (seaLevel >= -1 && seaLevel < level+1) {
+	          if (seaLevel >= 0 && seaLevel < level+1) {
 	             var c = 3;
 	            imgdata[pixel_pos] = 137;
               imgdata[pixel_pos + 1] = 188;
@@ -72,7 +72,7 @@ define([
 
 	});
 
-	return BCNLayer;
+	return BOSTONLayer;
 
 });
 

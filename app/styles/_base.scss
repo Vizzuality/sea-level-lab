@@ -5,7 +5,7 @@ body {
   font-family: $site-font-family;
   font-size: $site-font-size;
   color: $default-color;
-  line-height: $site-line-height;
+  line-height: 1.2em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -19,6 +19,7 @@ body {
 h1 {
   position: relative;
   font-size: 72px;
+  line-height: 1em;
   font-weight: bold;
   color: $color-01;
   margin-bottom: $medium-margin;
@@ -26,10 +27,10 @@ h1 {
   &:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     right: 0;
-    height: 20%;
+    height: 25%;
     background-color: rgba($color-0, .7);
   }
 }
@@ -37,6 +38,7 @@ h1 {
 h2 {
   position: relative;
   font-size: 36px;
+  line-height: 1.2em;
   font-weight: bold;
   color:  $color-01;
   margin-bottom: $medium-margin;
@@ -52,10 +54,19 @@ h2 {
   }
 }
 
-p {
+p,
+a {
   margin-bottom: $medium-margin;
   font-size: $site-font-size;
   color: $text-color-01;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 

@@ -13,13 +13,14 @@ define([
   'mps',
   'layers/SFLayer',
   'layers/BCNLayer',
-  'layers/MIAMMILayer',
+  'layers/BOSTONLayer',
   'layers/SSLayer',
   'layers/AARHONLayer',
   'views/MapView',
   'views/FilterNavView',
-  'views/LayersNavView'
-], function($, _, Backbone, gmap, mps,  SFLayer, BCNLayer, MIAMMILayer, SSLayer, AARHONLayer, MapView, FilterNavView, LayersNavView) {
+  'views/LayersNavView',
+  'views/NavigationView'
+], function($, _, Backbone, gmap, mps,  SFLayer, BCNLayer, BOSTONLayer, SSLayer, AARHONLayer, MapView, FilterNavView, LayersNavView, NavigationView) {
 
   'use strict';
 
@@ -66,19 +67,19 @@ define([
           });
 
           new MapView({
-            el: '#miammi .flooding-view',
+            el: '#boston .flooding-view',
 
-            controlView: 'miammi-control',
+            controlView: 'boston-control',
 
             options: {
               minZoom: 8,
               zoom: 12,
               disableDefaultUI: true,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(25.8280, -80.1736)
+              center: new google.maps.LatLng(42.3666, -71.049)
             },
 
-            layer: new MIAMMILayer()
+            layer: new BOSTONLayer()
           });
 
           new MapView({
@@ -120,17 +121,19 @@ define([
           this.mapView = true;
         }
 
+
         // Initialize layer
         mps.publish('map/toggle-layer', ['sf']);
         mps.publish('map/toggle-layer', ['bcn']);
         mps.publish('map/toggle-layer', ['ss']);
-        mps.publish('map/toggle-layer', ['miammi']);
+        mps.publish('map/toggle-layer', ['boston']);
         mps.publish('map/toggle-layer', ['aarhon']);
         mps.publish('filter/change', [{'1m': true}]);
       }, this));
     }
   });
 
+  new NavigationView;
   var router = new Router();
 
   return router;

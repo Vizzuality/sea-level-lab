@@ -9,7 +9,7 @@ define([
 
     init: function () {
       _.bindAll(this, 'filterTileImgdata');
-      this.dataMaxZoom = 12;
+      this.dataMaxZoom = 18;
       this.tileSize = new google.maps.Size(256, 256);
       this.tiles = {};
       this.params = {};
