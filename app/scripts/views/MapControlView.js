@@ -7,7 +7,7 @@ define([
 
   'use strict';
 
-  var MapView = Backbone.View.extend({
+  var MapControlView = Backbone.View.extend({
 
     //el: '.map',
 
@@ -15,9 +15,10 @@ define([
       _.bindAll(this, '_toggleLayer', '_addLayer');
 
       this.options = settings.options;
+
       this.layer = settings.layer;
+
       this.styles = settings.styles;
-      this.controlView = settings.controlView.toString();
 
       this.render();
     },
@@ -56,15 +57,9 @@ define([
       this.styledMap = new google.maps.StyledMapType(styles);
 
       this.map = new google.maps.Map(this.el, this.options);
-      this.ControlMap = new google.maps.Map(document.getElementById(this.controlView), this.options);
 
       this.map.mapTypes.set('map_style', this.styledMap);
       this.map.setMapTypeId('map_style');
-
-      this.ControlMap.mapTypes.set('map_style', this.styledMap);
-      this.ControlMap.setMapTypeId('map_style');
-
-
 
       this._resize();
       this._subscribe();
@@ -133,6 +128,6 @@ define([
 
   });
 
-  return MapView;
+  return MapControlView;
 
 });
