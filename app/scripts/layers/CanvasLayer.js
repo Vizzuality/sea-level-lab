@@ -84,9 +84,9 @@ define([
       if (zsteps < 0) {
         ctx.drawImage(image, 0, 0);
       } else {
-        ctx.imageSmoothingEnabled = false;
-        ctx.mozImageSmoothingEnabled = false;
-        ctx.webkitImageSmoothingEnabled = false;
+        ctx.imageSmoothingEnabled = true;
+        ctx.mozImageSmoothingEnabled = true;
+        ctx.webkitImageSmoothingEnabled = true;
 
         var srcX = 256 / Math.pow(2, zsteps) * (x % Math.pow(2, zsteps));
         var srcY = 256 / Math.pow(2, zsteps) * (y % Math.pow(2, zsteps));

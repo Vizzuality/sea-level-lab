@@ -120,9 +120,13 @@ define([
           this.mapView = true;
         }
 
-        // Initialize sf layer
+        // Initialize layer
         mps.publish('map/toggle-layer', ['sf']);
-        mps.publish('filter/change', [{'5m': true}]);
+        mps.publish('map/toggle-layer', ['bcn']);
+        mps.publish('map/toggle-layer', ['ss']);
+        mps.publish('map/toggle-layer', ['miammi']);
+        mps.publish('map/toggle-layer', ['aarhon']);
+        mps.publish('filter/change', [{'1m': true}]);
       }, this));
     }
   });

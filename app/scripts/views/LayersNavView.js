@@ -23,10 +23,10 @@ define([
       this._subscribe();
     },
 
-    render: function() {
-      this.$el.html(this.template());
-      $('.widgets').append(this.el);
-    },
+    // render: function() {
+    //   this.$el.html(this.template());
+    //   $('.widgets').append(this.el);
+    // },
 
     _subscribe: function() {
       mps.subscribe('map/toggle-layer', this._toggleSelected);
