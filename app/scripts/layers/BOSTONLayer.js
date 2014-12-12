@@ -12,7 +12,7 @@ define([
     init: function() {
       this._super();
      	this.name = 'boston';
-      this.urlTemplate = 'https://api.tiles.mapbox.com/v4/darkit.boston/%z/%x/%y.png?access_token=pk.eyJ1IjoiZGFya2l0IiwiYSI6IkhtblZxN2MifQ.4Se0dQvGFVxnnCrzPkoz3g';
+      this.urlTemplate = 'https://api.tiles.mapbox.com/v4/darkit.Boston/%z/%x/%y.png?access_token=pk.eyJ1IjoiZGFya2l0IiwiYSI6IkhtblZxN2MifQ.4Se0dQvGFVxnnCrzPkoz3g';
     },
 
     // this.params have the filter params (sea meters);
