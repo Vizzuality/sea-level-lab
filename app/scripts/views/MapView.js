@@ -17,20 +17,15 @@ define([
 
       this.options = settings.options;
 
-      //console.log(this.options.center);
+      //this.layer = setting.layer;
+
+      console.log(settings.layer.layer);
+      console.log(this.sfLayer);
 
       this.render();
     },
 
     render: function() {
-
-      // var options = {
-      //   minZoom: 3,
-      //   zoom: 12,
-      //   mapTypeId: google.maps.MapTypeId.SATELLITE,
-      //   center: new google.maps.LatLng(37.7441, -122.4289)
-      // };
-
       this.map = new google.maps.Map(this.el, this.options);
       this._resize();
       this._subscribe();

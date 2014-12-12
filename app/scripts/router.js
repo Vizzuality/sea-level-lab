@@ -11,10 +11,11 @@ define([
   'backbone',
   'gmap',
   'mps',
+  'layers/SFLayer',
   'views/MapView',
   'views/FilterNavView',
   'views/LayersNavView'
-], function($, _, Backbone, gmap, mps, MapView, FilterNavView, LayersNavView) {
+], function($, _, Backbone, gmap, mps,  SFLayer, MapView, FilterNavView, LayersNavView) {
 
   'use strict';
 
@@ -36,7 +37,13 @@ define([
               zoom: 12,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(37.7441, -122.4289)
+            },
+
+            layer: {
+             layer: new SFLayer()
             }
+
+
 
           });
 
@@ -48,7 +55,12 @@ define([
               zoom: 5,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(2.1487679, 41.39479)
+            },
+
+            layer: {
+             layer: new SFLayer()
             }
+
           });
 
           new MapView({
@@ -59,41 +71,46 @@ define([
               zoom: 12,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(37.7441, -122.4289)
+            },
+
+            layer: {
+             layer: new SFLayer()
             }
+
           });
 
-          new MapView({
-            el: '#barcelona .flooding-view',
+          // new MapView({
+          //   el: '#barcelona .flooding-view',
 
-            options: {
-              minZoom: 3,
-              zoom: 12,
-              mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(37.7441, -122.4289)
-            }
-          });
+          //   options: {
+          //     minZoom: 3,
+          //     zoom: 12,
+          //     mapTypeId: google.maps.MapTypeId.SATELLITE,
+          //     center: new google.maps.LatLng(37.7441, -122.4289)
+          //   }
+          // });
 
-          new MapView({
-            el: '#san-sebastian .flooding-view',
+          // new MapView({
+          //   el: '#san-sebastian .flooding-view',
 
-            options: {
-              minZoom: 3,
-              zoom: 12,
-              mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(37.7441, -122.4289)
-            }
-          });
+          //   options: {
+          //     minZoom: 3,
+          //     zoom: 12,
+          //     mapTypeId: google.maps.MapTypeId.SATELLITE,
+          //     center: new google.maps.LatLng(37.7441, -122.4289)
+          //   }
+          // });
 
-          new MapView({
-            el: '#aarhon .flooding-view',
+          // new MapView({
+          //   el: '#aarhon .flooding-view',
 
-            options: {
-              minZoom: 3,
-              zoom: 12,
-              mapTypeId: google.maps.MapTypeId.SATELLITE,
-              center: new google.maps.LatLng(37.7441, -122.4289)
-            }
-          });
+          //   options: {
+          //     minZoom: 3,
+          //     zoom: 12,
+          //     mapTypeId: google.maps.MapTypeId.SATELLITE,
+          //     center: new google.maps.LatLng(37.7441, -122.4289)
+          //   }
+          // });
 
           this.filterNavView = new FilterNavView();
           this.layersNavView = new LayersNavView();

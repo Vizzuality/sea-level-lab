@@ -7,12 +7,12 @@ define([
 
   'use strict';
 
-  var SFLayer = CanvasLayer.extend({
+  var BCNLayer = CanvasLayer.extend({
 
     init: function() {
       this._super();
-     	this.name = 'sf';
-      this.urlTemplate = 'https://api.tiles.mapbox.com/v4/darkit.SF/%z/%x/%y.png?access_token=pk.eyJ1IjoiZGFya2l0IiwiYSI6IkhtblZxN2MifQ.4Se0dQvGFVxnnCrzPkoz3g';
+     	this.name = 'bcn';
+      this.urlTemplate = 'https://api.tiles.mapbox.com/v4/darkit.barcelona/%z/%x/%y.png?access_token=pk.eyJ1IjoiZGFya2l0IiwiYSI6IkhtblZxN2MifQ.4Se0dQvGFVxnnCrzPkoz3g';
     },
 
     // this.params have the filter params (sea meters);
@@ -75,7 +75,7 @@ define([
 
 	});
 
-	return SFLayer;
+	return BCNLayer;
 
 });
 
