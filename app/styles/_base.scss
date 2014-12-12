@@ -70,6 +70,21 @@ a {
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   margin: 150px $large-margin;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 96%;
+    margin: 100px 2%;
+  }
+
+  .logo {
+    top: -101px;
+  }
+
+  h1:hover {
+    height: 60%;
+  }
 }

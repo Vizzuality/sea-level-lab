@@ -21,6 +21,7 @@ define([
     },
 
     render: function() {
+      var self = this;
       var styles = [{
           featureType: "landscape",
           stylers: [
@@ -67,7 +68,27 @@ define([
       this.ControlMap.mapTypes.set('map_style', this.styledMap);
       this.ControlMap.setMapTypeId('map_style');
 
+      var timer;
 
+      google.maps.event.addListener(this.map, 'center_changed', function() {
+        if (timer) {
+          clearTimeout(timer);
+        }
+        timer = setTimeout(function() {
+          self.ControlMap.setCenter(self.map.getCenter());
+          self.ControlMap.setZoom(self.map.getZoom());
+        }, 300);
+      });
+
+      google.maps.event.addListener(this.ControlMap, 'center_changed', function() {
+        if (timer) {
+          clearTimeout(timer);
+        }
+        timer = setTimeout(function() {
+          self.map.setCenter(self.ControlMap.getCenter());
+          self.map.setZoom(self.ControlMap.getZoom());
+        }, 300);
+      });
 
       this._resize();
       this._subscribe();

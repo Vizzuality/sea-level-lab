@@ -17,3 +17,20 @@
   margin-bottom: $large-margin;
   overflow: hidden;
 }
+
+
+@media screen and (max-width: 540px) {
+  .map {
+    width: 90%;
+    margin: 20px auto;
+    pointer-events: none;
+
+    &:first-of-type {
+      float: none;
+    }
+
+    &:last-child {
+      float: none;
+    }
+  }
+}

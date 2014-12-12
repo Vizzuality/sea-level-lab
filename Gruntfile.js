@@ -40,6 +40,17 @@ module.exports = function(grunt) {
             '*.html'
           ]
         }]
+      },
+      fonts: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= root.app %>/fonts',
+          dest: '<%= root.dist %>/fonts',
+          src: [
+            '*.*'
+          ]
+        }]
       }
     },
 
@@ -50,7 +61,7 @@ module.exports = function(grunt) {
         generatedImagesDir: '<%= root.tmp %>/images/sprite',
         imagesDir: '<%= root.app %>/images',
         javascriptsDir: '<%= root.app %>/scripts',
-        fontsDir: '<%= root.app %>/styles/fonts',
+        fontsDir: '<%= root.app %>/fonts',
         importPath: '<%= root.app %>/vendor',
         relativeAssets: false,
         assetCacheBuster: false
@@ -223,7 +234,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'requirejs',
     'useminPrepare',
-    'copy:dist',
+    'copy',
     'compass:dist',
     'uglify',
     'cssmin',

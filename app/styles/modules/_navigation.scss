@@ -2,13 +2,34 @@
   margin-bottom: $large-margin;
 
   ul {
+    // @include display-flex();
+    // @include justify-content(space-between);
+    // @include flex-direction(row);
+
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+
     display: flex;
-    flex-direction: row;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+
     justify-content: space-between;
+    justify-content: -webkit-space-between;
+    justify-content: -moz-space-between;
+    justify-content: -ms-space-between;
+
+    flex-direction: row;
+    flex-direction: -webkit-row;
+    flex-direction: -moz-row;
+    flex-direction: -ms-row;
+
+    flex-wrap: wrap;
   }
 
   li {
-
+    margin-right: 10px;
   }
 
   a {
@@ -33,5 +54,6 @@
       height: 50%;
     }
   }
-
 }
+
+

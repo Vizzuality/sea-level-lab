@@ -1,6 +1,5 @@
 .filter-nav {
-  //display: flex;
-  // align-items: center;
+
   position: fixed;
   left: 0;
   right: 0;
@@ -8,7 +7,7 @@
   height: 50px;
   padding: 10px;
   text-align: center;
-  background-color: rgba($color-0, .9);
+  background-color: $color-01;
   border-top: 2px solid rgba($color-01, .1);
 
   .filters {
@@ -16,9 +15,24 @@
   }
 
   ul {
+    // @include display-flex;
+    // @include justify-content(space-between);
+    // @include align-content(center);
+
     display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+
     justify-content: space-between;
+    justify-content: -webkit-space-between;
+    justify-content: -moz-space-between;
+    justify-content: -ms-space-between;
+
     align-content: center;
+    align-content: -webkit-center;
+    align-content: -moz-center;
+    align-content: -ms-center;
 
     width: 50%;
     margin: 0 auto;
@@ -31,11 +45,11 @@
     line-height: 40px;
 
     &.is-active {
-      color: $color-0;
-      background-color: $color-01;
+      color: $text-color-01;
+      background-color: $color-0;
 
       label {
-        color: $color-0;
+        color: $color-01;
       }
     }
 
@@ -44,8 +58,10 @@
   label {
     font-family: $site-font-family;
     font-size: $site-font-size;
-    color: $text-color-01;
+    color: $color-0;
     padding-right: 15px;
+    cursor: pointer;
+
   }
 
   input {

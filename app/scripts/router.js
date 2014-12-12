@@ -42,7 +42,7 @@ define([
             options: {
               minZoom: 8,
               zoom: 12,
-              disableDefaultUI: true,
+              // disableDefaultUI: true,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(37.7441, -122.4289)
             },
@@ -58,7 +58,7 @@ define([
             options: {
               minZoom: 8,
               zoom: 12,
-              disableDefaultUI: true,
+              // disableDefaultUI: true,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(41.4186, 2.2598)
             },
@@ -74,7 +74,7 @@ define([
             options: {
               minZoom: 8,
               zoom: 12,
-              disableDefaultUI: true,
+              // disableDefaultUI: true,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(42.3666, -71.049)
             },
@@ -90,7 +90,7 @@ define([
             options: {
               minZoom: 8,
               zoom: 13,
-              disableDefaultUI: true,
+              // disableDefaultUI: true,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(43.3099, -1.9913)
             },
@@ -107,7 +107,7 @@ define([
             options: {
               minZoom: 8,
               zoom: 13,
-              disableDefaultUI: true,
+              // disableDefaultUI: true,
               mapTypeId: google.maps.MapTypeId.SATELLITE,
               center: new google.maps.LatLng(56.1489, 10.2317)
             },
