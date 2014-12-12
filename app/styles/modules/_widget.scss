@@ -1,9 +1,0 @@
-.widget {
-  position: absolute;
-  z-index: 2;
-  background: white;
-  border: 1px solid #666;
-  @include border-radius(3px);
-  @include box-shadow(0px 0px 3px #666);
-  @include unselectable;
-}
